@@ -1,0 +1,125 @@
+.planet-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 0;
+  background: url('../../background.jpg') no-repeat center/cover;
+  transition: height 0.25s ease-in;
+
+  &.open {
+    height: 95px;
+
+    .btn-planet-tab {
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .list-wrap {
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    display: flex;
+    justify-content: space-around;
+    border-bottom:2px solid #000;
+  }
+
+  .btn-planet-tab {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    min-height: 24px;
+    background: #000;
+    border-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 0 15px;
+    transform: translate(-50%, -1px);
+
+    img {
+      width: 24px;
+      height: 24px;
+      transition: all 0.15s ease-in;
+      transform: rotate(0);
+    }
+  }
+
+  .btn-planet {
+    position: relative;
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 100%;
+    width: 64px;
+    height: 64px;
+    background: rgba(0, 0, 0, 0.05) no-repeat center/cover;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      display: inline-block;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.25);
+      font-weight: bold;
+      padding: 3px 5px;
+      border-radius: 4px;
+    }
+
+    &.planet {
+      &0 {
+        z-index: 100;
+        background-color: transparent;
+        background-image: url('../../menu_img/menu0.png');
+      }
+      &1 {
+        z-index: 99;
+        background-color: transparent;
+        background-image: url('../../menu_img/menu1.png');
+      }
+      &2 {
+        z-index: 98;
+        background-color: transparent;
+        background-image: url('../../menu_img/menu2.png');
+      }
+      &3 {
+        z-index: 97;
+        background-color: transparent;
+        background-image: url('../../menu_img/menu3.png');
+
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: 15%;
+          left: 0;
+          width: 116%;
+          height: 117%;
+          background: url('../../menu_img/menu3-1.png')no-repeat center/cover;
+        }
+      }
+      &4 {
+        z-index: 96;
+        background-color: transparent;
+        background-image: url('../../menu_img/menu4.png');
+      }
+      &5 {
+        z-index: 95;
+        background-color: transparent;
+        background-image: url('../../menu_img/menu5.png');
+      }
+      &6 {
+        z-index: 94;
+        background-color: transparent;
+        background-image: url('../../menu_img/menu6.png');
+      }
+      &7 {
+        z-index: 93;
+        background-color: transparent;
+        background-image: url('../../menu_img/menu7.png');
+      }
+    }
+  }
+}

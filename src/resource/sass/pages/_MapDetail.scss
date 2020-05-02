@@ -1,0 +1,16 @@
+.map-detail {
+  position: relative;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  &.list-open {
+    .planet-map {
+      height: 67vh;
+    }
+    .area-list {
+      height: 33vh;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+
+.area-list {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  width:100vw;
+  height: 0;
+  border-top: 2px solid #ccc;
+  transition: height 0.25s ease-in;
+
+  .btn-area-list-toggle {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    z-index: 100;
+    transform: translateY(1px);
+    transition: all 0.25s ease-in;
+    background: #fff;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 2px 5px 0;
+    box-sizing: border-box;
+    width: 40px;
+    height: 24px;
+    border: 2px solid #eee;
+    border-bottom: none;
+    margin-top: -27px;
+    outline: 0;
+
+    img {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .hidden-area-list {
+    overflow: auto;
+    padding: 15px;
+    height: 100%;
+    background: url('../../clanprofilebackgroundsmall.jpg') no-repeat 0 0/cover;
+
+    .item {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      label {
+        display: inline-block;
+        color: #fff;
+        padding: 4px;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.25);
+      }
+    }
+  }
+}
